@@ -10,6 +10,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/")
+    public String hello(){
+        return "Hello, user!";
+    }
+
     @GetMapping("/users")
     public List<User> userList(){
         return userService.userList();
